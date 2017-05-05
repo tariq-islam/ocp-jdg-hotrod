@@ -9,33 +9,48 @@ Add Data to the <i>default</i> Cache
 <table>
     <form method="post" action="test">
         <tr>
-        <td>Name</td>
-        <td>
-            <input type="text" name="name">
-        </td>
+            <td>Name</td>
+            <td>
+                <input type="text" name="name">
+            </td>
         </tr>
        
-               <tr>
-        <td>Surname</td>
-        <td>
-            <input type="text" name="surname">
-        </td>
+        <tr>
+            <td>Surname</td>
+            <td>
+                <input type="text" name="surname">
+            </td>
         </tr>
         
-                <tr>
-        <td>Team</td>
-        <td>
-            <input type="text" name="teamname">
-        </td>
+        <tr>
+            <td>Team</td>
+            <td>
+                <input type="text" name="teamname">
+            </td>
         </tr>
         
-                <tr>
-       
-        <td>
-           <input type="submit">
-        </td>
+        <tr>
+            <td>
+               <input type="submit">
+            </td>
         </tr>          
     
+    </form>
+
+    <form method="get" action="test">
+        <tr>
+            <td>
+                Key (Last Name):
+            </td>
+            <td>
+                <input type="text" name="surname" >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit">
+            </td>
+        </tr>
     </form>
 </table>
 

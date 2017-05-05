@@ -44,6 +44,7 @@ public class TestServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) {
 		doPost(req, res);
+
 	}
 
 	@Override
@@ -64,14 +65,14 @@ public class TestServlet extends HttpServlet {
 			player.setName(name);
 			player.setSurname(surname);
 			player.setTeamName(teamName);
-			String randomId = UUID.randomUUID().toString();
+			// String randomId = UUID.randomUUID().toString();
 
-			cache.put(randomId, player);
+			cache.put(player.getSurname(), player);
 
-			out.println("Added Player: " + cache.get(randomId));
+			out.println("Added Player: " + cache.get(player.getSurname()));
 
-			out.println("\n============================" +
-			"\n\nCurrent cache contents (size: " + cache.size() + ") from Pod " + InetAddress.getLocalHost() + ":\n\n " + cache.getAll(cache.keySet()));
+			out.println("============================" +
+			"Current cache contents (size: " + cache.size() + ") from Pod " + InetAddress.getLocalHost() + ":\n\n " + cache.getAll(cache.keySet()));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
