@@ -2,6 +2,7 @@ package infinispan;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -68,6 +69,8 @@ public class TestServlet extends HttpServlet {
 			cache.put(randomId, player);
 
 			out.println("Added Player: " + cache.get(randomId));
+
+			out.println("Current cache contents from Pod " + InetAddress.getLocalHost() + ": " + cache.getAll(cache.keySet()));
 			 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
