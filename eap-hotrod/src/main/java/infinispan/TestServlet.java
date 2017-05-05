@@ -70,8 +70,8 @@ public class TestServlet extends HttpServlet {
 
 			out.println("Added Player: " + cache.get(randomId));
 
-			out.println("Current cache contents from Pod " + InetAddress.getLocalHost() + ": " + cache.getAll(cache.keySet()));
-			 
+			out.println("\n============================" +
+			"\n\nCurrent cache contents (size: " + cache.size() + ") from Pod " + InetAddress.getLocalHost() + ":\n\n " + cache.getAll(cache.keySet()));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
